@@ -5,14 +5,13 @@ using namespace std;
 int main() {
     string s;
     getline(cin,s);
-    ll c=0;
-    bool f = false;
-    for(ll i=0;i<s.size();i++)
+    stringstream ss(s);
+    string a;
+    ll c=0,i=0;
+    while(ss>>a)
     {
-        if((s[i+1]>='A' && s[i+1]<='Z') || (s[i+1]>='a' && s[i+1]<='z')) f= true;
-        if(s[i] == ' ' && ((s[i+1]>='A' && s[i+1]<='Z') || (s[i+1]>='a' && s[i+1]<='z'))) c++;
+        if(a[i]>='A' && a[i]<='Z' || a[i]>='a' && a[i]<='z')c++;
     }
-    if(f) cout<<c+1<<endl;
-    else cout<<0<<endl;
+    cout<<c<<endl;
     return 0;
 }
