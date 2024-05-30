@@ -7,10 +7,17 @@ int main() {
     getline(cin,s);
     stringstream ss(s);
     string a;
-    ll c=0,i=0;
+    ll c=0;
     while(ss>>a)
     {
-        if(a[i]>='A' && a[i]<='Z' || a[i]>='a' && a[i]<='z')c++;
+        for(int i=0;i<a.size();i++)
+        {
+            if(a[i]>='A' && a[i]<='Z' || a[i]>='a' && a[i]<='z')
+            {
+                c++;
+                break;
+            }
+        }
     }
     cout<<c<<endl;
     return 0;
