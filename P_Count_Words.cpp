@@ -5,20 +5,12 @@ using namespace std;
 int main() {
     string s;
     getline(cin,s);
-    stringstream ss(s);
-    string a;
     ll c=0;
-    while(ss>>a)
+    for(int i=1;i<s.size();i++)
     {
-        for(int i=0;i<a.size();i++)
-        {
-            if(a[i]>='A' && a[i]<='Z' || a[i]>='a' && a[i]<='z')
-            {
-                c++;
-                break;
-            }
-        }
+        if(!(s[i]>='A' && s[i]<='z') && s[i+1]>='A' && s[i+1]<='z') c++;
+        else continue;
     }
-    cout<<c<<endl;
+    cout<<c+1<<endl;
     return 0;
 }
