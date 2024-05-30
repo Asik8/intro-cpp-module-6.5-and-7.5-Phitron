@@ -20,7 +20,7 @@ int main() {
         else 
         {
             if(odd ==n || even ==n) cout<<max(even,odd)/2<<endl;
-            else cout<<max(even,odd)-min(even,odd)<<endl;
+            else cout<<min(labs(even-n/2),labs(odd-n/2))<<endl;
         }
     }
 
