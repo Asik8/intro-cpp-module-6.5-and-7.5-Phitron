@@ -12,7 +12,7 @@ int main() {
     {
         if(j>0)cout<<" ";
         for(int i=a.size()-1;i>=0;i--) cout<<a[i];
-
+        j++;
     }
 
     return 0;
